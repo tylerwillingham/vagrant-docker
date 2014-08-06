@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM dockerfile/ubuntu
 MAINTAINER Tyler Willingham contact@tylerwillingham.com
 
 #
@@ -19,10 +19,10 @@ RUN \
 VOLUME ["/data", "/etc/nginx/sites-enabled", "/var/log/nginx"]
 
 # Define working directory.
-# WORKDIR /etc/nginx
+WORKDIR /etc/nginx
 
 # Define default command.
-# CMD ["nginx"]
+CMD ["nginx"]
 
 # Expose ports.
 EXPOSE 80
