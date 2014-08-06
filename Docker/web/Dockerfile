@@ -1,11 +1,11 @@
-FROM dockerfile/ubuntu
-MAINTAINER Tyler Willingham contact@tylerwillingham.com
-
 #
 # Nginx Dockerfile
 #
 # https://github.com/dockerfile/nginx
 #
+
+# Pull base image.
+FROM dockerfile/ubuntu
 
 # Install Nginx.
 RUN \
@@ -25,5 +25,4 @@ WORKDIR /etc/nginx
 CMD ["nginx"]
 
 # Expose ports.
-EXPOSE 80
-EXPOSE 443
+EXPOSE 80 443
